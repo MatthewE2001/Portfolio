@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.foodtruckvr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Bradley\\Desktop\\SpaceFoodTruck\\fa21-capstone-2021-22-t04-prototype3\\FoodTruckVR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "FoodTruckVR [Testing]"
+        }
+      }
+    }
+  ]
+}
