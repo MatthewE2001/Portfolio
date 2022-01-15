@@ -1,0 +1,7 @@
+doingDamageModifier 100
+takingDamageModifier 95
+allyModifier 1.2
+allyRange 15
+stayCloseMultiplier 1.05
+stayCloseRange 1
+difficultyRating 85

@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1551639375828263768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5410944079470836904}
+    m_Modifications:
+    - target: {fileID: 1593989423693462189, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: newRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190519083744401880, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: abilityName
+      value: Heal (F)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.999967
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.008131275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959136, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959141, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959142, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_Name
+      value: Outlaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132706069046959142, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227265181012555074, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: damageBuff
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227265181012555097, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783651139966714553, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+--- !u!1 &3229878682221133694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4132706069046959142, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+  m_PrefabInstance: {fileID: 1551639375828263768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1551639377396343249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3657137044750421778, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322917, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_Name
+      value: NPCRecruitInactiveObj Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.999967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.008131275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.932
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: This guy has an aura around him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: It makes your gun stronger!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: prefabUnitToRecruit
+      value: 
+      objectReference: {fileID: 4132706069046959142, guid: cefef96d9fb0e544c93b047f77b3eb50, type: 3}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: Also, he can heal by targeting an ally...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: recruitable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: ...after using his ability.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069248322938, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: inactiveUnitToRecruit
+      value: 
+      objectReference: {fileID: 3229878682221133694}
+    - target: {fileID: 6818185069248322939, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: NPCName
+      value: NPCRecruitInactiveObjVariant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6818185069556115353, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554140133907198777, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554140133907198777, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+--- !u!4 &5410944079470836904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6818185069248322937, guid: 74994fe47efff58439b0090363ca358f, type: 3}
+  m_PrefabInstance: {fileID: 1551639377396343249}
+  m_PrefabAsset: {fileID: 0}

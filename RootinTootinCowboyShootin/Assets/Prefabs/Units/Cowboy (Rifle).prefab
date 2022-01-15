@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4646195309430244589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125826983936583772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f7ea8f17568ad46acde1077ffe06ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  abilityPrefab: {fileID: 0}
+  usingAbility: 0
+  previewPrefab: {fileID: 0}
+--- !u!1001 &298792000273072673
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: bulletSpeed
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: accuracyError
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: accuracyPercent
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: cooldownInSeconds
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: overrideRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: newRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: numberOfShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: fullMagazine
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: setReloadTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: bulletDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216400630, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 2754243000846197068}
+    - target: {fileID: 610437237891805059, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: abilityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4789808289905129155}
+    - target: {fileID: 610437237891805059, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: abilityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UseAbility
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -80.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172731, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406039259623172733, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+      propertyPath: m_Name
+      value: Cowboy (Rifle)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+--- !u!1 &3125826983936583772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3406039259623172733, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+  m_PrefabInstance: {fileID: 298792000273072673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4789808289905129155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5070302208072185058, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+  m_PrefabInstance: {fileID: 298792000273072673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125826983936583772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f7ea8f17568ad46acde1077ffe06ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &2754243000846197068 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2457994352027919213, guid: 951e50b9d12c9ec47a479e83ee02b1c9, type: 3}
+  m_PrefabInstance: {fileID: 298792000273072673}
+  m_PrefabAsset: {fileID: 0}
