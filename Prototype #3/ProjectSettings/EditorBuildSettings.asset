@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Deliverable/Start.unity
+    guid: 52c56bb9d15007c44acc844daba1e4da
+  - enabled: 1
+    path: Assets/Scenes/Deliverable/FigureSelection.unity
+    guid: 1beb2e008e219f840a3d5c36bdd18bc9
+  - enabled: 1
+    path: Assets/Scenes/Deliverable/ForestScene.unity
+    guid: 991c1ff1880ba2341b581b9cc756aee7
+  - enabled: 1
+    path: Assets/Scenes/Deliverable/WinScene.unity
+    guid: 0cf5f89fc557be346971c0e6837b3c4f
+  - enabled: 1
+    path: Assets/Scenes/Deliverable/LossScene.unity
+    guid: 32e6c9ff945861b4bb9951bca87956db
+  m_configObjects: {}
