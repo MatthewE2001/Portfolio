@@ -50,9 +50,13 @@ public class MoveUnits : MonoBehaviour
             { 
                 endPosition,
                 endPosition + new Vector3 (2, 0),
-                endPosition + new Vector3 (4, 0),
-                endPosition + new Vector3 (6, 0),
-                endPosition + new Vector3 (8, 0)
+                endPosition + new Vector3 (0, 2),
+                endPosition + new Vector3 (-2, 0),
+                endPosition + new Vector3 (0, -2),
+                endPosition + new Vector3 (2, 2),
+                endPosition + new Vector3 (2, -2),
+                endPosition + new Vector3 (-2, -2),
+                endPosition + new Vector3 (-2, 2)
             };
 
             int tmpListCount = 0;
