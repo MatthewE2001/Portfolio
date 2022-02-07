@@ -28,7 +28,7 @@ public class UnitFormations : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             //change the unit formation to circle
-            currentFormation = "Circle";
+            currentFormation = "Circle"; //maybe make this into Croatia or something instead
         }
 
         if (Input.GetKeyDown(KeyCode.V))
