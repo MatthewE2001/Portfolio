@@ -9,11 +9,14 @@ public class MoveUnits : MonoBehaviour
     Vector3 worldMousePosition;
     Vector3 endPosition;
     Collider2D[] colliders;
+    string formation;
+    List<Vector3> diffMovePositions;
+    Vector3[] tmpPositions;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tmpPositions = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetSquarePositions();
     }
 
     // Update is called once per frame
@@ -45,19 +48,70 @@ public class MoveUnits : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             endPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            formation = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetCurrentFormation();
 
-            List<Vector3> diffMovePositions = new List<Vector3>
-            { 
-                endPosition,
-                endPosition + new Vector3 (2, 0),
-                endPosition + new Vector3 (0, 2),
-                endPosition + new Vector3 (-2, 0),
-                endPosition + new Vector3 (0, -2),
-                endPosition + new Vector3 (2, 2),
-                endPosition + new Vector3 (2, -2),
-                endPosition + new Vector3 (-2, -2),
-                endPosition + new Vector3 (-2, 2)
-            };
+            if (formation == "Square")
+            {
+                tmpPositions = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetSquarePositions();
+
+                diffMovePositions = new List<Vector3>
+                {
+                    endPosition,
+                    endPosition + tmpPositions[1],
+                    endPosition + tmpPositions[2],
+                    endPosition + tmpPositions[3],
+                    endPosition + tmpPositions[4],
+                    endPosition + tmpPositions[5]
+                };
+            }
+
+            if (formation == "Circle")
+            {
+                tmpPositions = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetCirclePositions();
+
+                diffMovePositions = new List<Vector3>
+                {
+                    endPosition,
+                    endPosition + tmpPositions[1],
+                    endPosition + tmpPositions[2],
+                    endPosition + tmpPositions[3],
+                    endPosition + tmpPositions[4],
+                    endPosition + tmpPositions[5],
+                    endPosition + tmpPositions[6],
+                    endPosition + tmpPositions[7],
+                    endPosition + tmpPositions[8]
+                };
+            }
+
+            if (formation == "Line")
+            {
+                tmpPositions = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetLinePositions();
+
+                diffMovePositions = new List<Vector3>
+                {
+                    endPosition,
+                    endPosition + tmpPositions[1],
+                    endPosition + tmpPositions[2],
+                    endPosition + tmpPositions[3],
+                    endPosition + tmpPositions[4],
+                    endPosition + tmpPositions[5]
+                };
+            }
+
+            if (formation == "Diamond")
+            {
+                tmpPositions = GameObject.Find("GameManager").GetComponent<UnitFormations>().GetDiamondPositions();
+
+                diffMovePositions = new List<Vector3>
+                {
+                    endPosition,
+                    endPosition + tmpPositions[1],
+                    endPosition + tmpPositions[2],
+                    endPosition + tmpPositions[3],
+                    endPosition + tmpPositions[4],
+                    endPosition + tmpPositions[5]
+                };
+            }
 
             int tmpListCount = 0;
 
