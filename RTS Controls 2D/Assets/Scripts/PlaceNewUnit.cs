@@ -9,6 +9,7 @@ public class PlaceNewUnit : MonoBehaviour
     public float trainingTime;
 
     bool unitPlacementActive = false;
+    bool unitCreationBuildingActive = false;
     float currentTrainingTime;
 
     // Start is called before the first frame update
