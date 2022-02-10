@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        moveLocation = gameObject.transform.position;
     }
 
     // Update is called once per frame
