@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3811781782703096829}
   - component: {fileID: 3811781782703096826}
   - component: {fileID: 3811781782703096827}
+  - component: {fileID: 6989699104466000812}
+  - component: {fileID: 7295018585347306585}
   m_Layer: 0
   m_Name: AI_Team2
   m_TagString: Team2
@@ -95,3 +97,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6989699104466000812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811781782703096824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28bd637b8546f04aa8d02a4bbd58009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7295018585347306585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811781782703096824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e664ee203ff7ba149aa0c6d2c8bc7ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
