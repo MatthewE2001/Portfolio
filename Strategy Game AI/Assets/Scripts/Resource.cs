@@ -2,8 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ResourceTypes
+{
+    Gold,
+    Food
+}
+
 public class Resource : MonoBehaviour
 {
+    public int startAmountOfResource;
+
+    bool resourceRemaining;
+    int currentResourceAmount;
+
     // Start is called before the first frame update
     void Start()
     {

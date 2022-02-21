@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class BaseHealth : MonoBehaviour
 {
-    public int maxAmountCarry;
-    public ResourceTypes resourceType;
+    public int startBaseHealth;
 
-    int currentAmountCarry;
-    bool inventoryFull;
+    int currentBaseHealth;
 
     // Start is called before the first frame update
     void Start()
