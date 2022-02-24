@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600118838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.7, y: 0, z: -25.6}
+  m_LocalPosition: {x: -24.7, y: 1, z: -25.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -710,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423316511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.2, y: 0, z: 34.2}
+  m_LocalPosition: {x: 29.2, y: 1, z: 34.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -764,7 +764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3811781782703096828, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.53
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3811781782703096828, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
       propertyPath: m_LocalPosition.z
@@ -800,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6989699104466000812, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
       propertyPath: moveSpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6989699104466000812, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
       propertyPath: teamManager
@@ -834,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4569629275445348166, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.53
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4569629275445348166, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142951362117434739, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
       propertyPath: moveSpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8142951362117434739, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
       propertyPath: teamManager

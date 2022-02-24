@@ -37,41 +37,28 @@ public class TeamManager : MonoBehaviour
         currentGold = startingGold;
 
         SetAIMoveLocations();
-
-        for (int i = 0; i < aiUnits.Length; i++)
-        {
-            aiUnits[i].GetComponent<MoveAI>().ChangeIsMoving();
-        }
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (locationChangeNeeded == true)
+    {    
+        for (int i = 0; i < aiUnits.Length; i++)
         {
-            for (int i = 0; i < aiUnits.Length; i++)
+            if (Vector3.Distance(aiUnits[i].transform.position, new Vector3(0.0f, 0.0f, 0.0f)) < 2.0f) //Vector3.Distance()
             {
-                if (aiUnits[i].transform.position == new Vector3(0,0,0))
-                {
-                    aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-                    aiUnits[i].GetComponent<MoveAI>().ChangeIsMoving();
-                }
-                
-                if (aiUnits[i].transform.position == goldObject.transform.position)
-                {
-                    aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-                    aiUnits[i].GetComponent<MoveAI>().ChangeIsMoving();
-                }
-                
-                if (aiUnits[i].transform.position == gameObject.transform.position)
-                {
-                    aiUnits[i].GetComponent<MoveAI>().SetLocation(goldObject.transform.position);
-                    aiUnits[i].GetComponent<MoveAI>().ChangeIsMoving();
-                }
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
             }
-
-            locationChangeNeeded = false;
-        }
+            
+            if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 2.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
+            }
+            
+            if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 2.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(goldObject.transform.position);
+            }
+        }        
     }
 
     void TrainNewUnit()
