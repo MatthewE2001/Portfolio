@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &585588090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7432067891415928362, guid: cc909aff84a55c849ac988ff7f912117, type: 3}
+  m_PrefabInstance: {fileID: 7432067891105944224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &600118838
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +179,8 @@ MonoBehaviour:
   soldierTrainingTime: 0
   startingFood: 0
   startingGold: 0
+  goldObject: {fileID: 1566163708}
+  foodObject: {fileID: 585588090}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00b846133beeee4f9c2ecdf6aaf16af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBaseHealth: 0
 --- !u!1 &1321292562
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00b846133beeee4f9c2ecdf6aaf16af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBaseHealth: 0
 --- !u!1 &1423316511
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +736,13 @@ MonoBehaviour:
   soldierTrainingTime: 0
   startingFood: 0
   startingGold: 0
+  goldObject: {fileID: 1566163708}
+  foodObject: {fileID: 585588090}
+--- !u!1 &1566163708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6694045671971486145, guid: 7f8d9d73ba4e0e648951098696937575, type: 3}
+  m_PrefabInstance: {fileID: 6694045670853468064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3811781781080239769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,6 +798,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6989699104466000812, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
+      propertyPath: moveSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989699104466000812, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
+      propertyPath: teamManager
+      value: 
+      objectReference: {fileID: 600118838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
 --- !u!1 &3811781781080239770 stripped
@@ -844,6 +868,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8142951362117434739, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
+      propertyPath: moveSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142951362117434739, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
+      propertyPath: teamManager
+      value: 
+      objectReference: {fileID: 1423316511}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62fd53d1b9beb8a499057c567bf25f9c, type: 3}
 --- !u!1 &4569629274194741139 stripped
