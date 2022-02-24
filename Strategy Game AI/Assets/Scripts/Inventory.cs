@@ -7,6 +7,8 @@ public class Inventory : MonoBehaviour
     public int maxAmountCarry;
     public ResourceTypes resourceType;
 
+    public GameObject gold;
+
     int currentAmountCarry;
     bool inventoryFull;
 
@@ -20,5 +22,18 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PickUpResources()
+    {
+        if (resourceType == ResourceTypes.Gold)
+        {
+
+        }
+
+        if (resourceType == ResourceTypes.Food)
+        {
+
+        }
     }
 }

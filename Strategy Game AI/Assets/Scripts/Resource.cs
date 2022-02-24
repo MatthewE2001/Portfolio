@@ -24,6 +24,9 @@ public class Resource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (resourceRemaining == false)
+        {
+            currentResourceAmount = startAmountOfResource; //just to reset the resource points for simplicity
+        }
     }
 }
