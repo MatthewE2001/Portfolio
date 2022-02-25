@@ -30,7 +30,11 @@ public class MoveUnits : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             worldMousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            
+
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                colliders[i].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -41,6 +45,7 @@ public class MoveUnits : MonoBehaviour
             for (int i = 0; i < colliders.Length; i++)
             {
                 colliders[i].gameObject.GetComponent<Movement>().ChangeMoveActive();
+                colliders[i].gameObject.GetComponent<SpriteRenderer>().color = Color.green;
                 
             }
         }
