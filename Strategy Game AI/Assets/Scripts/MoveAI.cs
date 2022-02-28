@@ -9,6 +9,8 @@ public class MoveAI : MonoBehaviour
 
     public GameObject teamManager;
 
+    bool hasAction = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +31,15 @@ public class MoveAI : MonoBehaviour
     public void SetLocation(Vector3 location)
     {
         movePosition = location;
+    }
+
+    public void ChangeHasAction(bool change)
+    {
+        hasAction = change;
+    }
+
+    public bool GetHasAction()
+    {
+        return hasAction;
     }
 }

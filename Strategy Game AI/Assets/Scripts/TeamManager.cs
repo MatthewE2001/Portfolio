@@ -44,6 +44,15 @@ public class TeamManager : MonoBehaviour
     {    
         for (int i = 0; i < aiUnits.Length; i++)
         {
+            //if (currentGold < currentFood && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
+            //aiUnits[i].GetComponent<MoveAI>().SetLocation(goldObject.transform.position);
+
+            //if (currentFood < currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
+            //aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
+
+            //if (currentFood == currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
+            //then maybe have it pick at random or just default to food? 
+
             if (Vector3.Distance(aiUnits[i].transform.position, new Vector3(0.0f, 0.0f, 0.0f)) < 2.0f) //Vector3.Distance()
             {
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
