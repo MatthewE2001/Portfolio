@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeAdjustment : MonoBehaviour
 {
-    public float timeScaleChange;
+    public Slider timeSlider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,11 @@ public class TimeAdjustment : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ChangeTimeScale()
+    {        
+        Time.timeScale = timeSlider.value;
+        Debug.Log(Time.timeScale);
     }
 }

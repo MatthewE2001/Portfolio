@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum AIStates
 { 
@@ -21,6 +22,7 @@ public class TeamManager : MonoBehaviour
 
     public GameObject goldObject;
     public GameObject foodObject;
+    public Slider moveSpeedSlider;
 
     int currentFood;
     int currentGold;
@@ -91,5 +93,13 @@ public class TeamManager : MonoBehaviour
     public void SetLocationReached()
     {
         locationChangeNeeded = true;
+    }
+
+    public void ChangeAIMoveSpeed()
+    {
+        for (int i = 0; i < aiUnits.Length; i++)
+        {
+            aiUnits[i].GetComponent<MoveAI>().ChangeMoveSpeed(moveSpeedSlider.value);
+        }
     }
 }

@@ -33,6 +33,11 @@ public class MoveAI : MonoBehaviour
         movePosition = location;
     }
 
+    public void ChangeMoveSpeed(float val)
+    {
+        moveSpeed = val;
+    }
+
     public void ChangeHasAction(bool change)
     {
         hasAction = change;
