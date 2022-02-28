@@ -30,15 +30,11 @@ public class TeamManager : MonoBehaviour
     int currentUnitTrainingTime;
     int currentSoldierTrainingTime;
 
-    bool locationChangeNeeded = true;
-
     // Start is called before the first frame update
     void Start()
     {
         currentFood = startingFood;
         currentGold = startingGold;
-
-        SetAIMoveLocations();
     }
 
     // Update is called once per frame
@@ -46,30 +42,25 @@ public class TeamManager : MonoBehaviour
     {    
         for (int i = 0; i < aiUnits.Length; i++)
         {
-            //if (currentGold < currentFood && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
-            //aiUnits[i].GetComponent<MoveAI>().SetLocation(goldObject.transform.position);
-
-            //if (currentFood < currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
-            //aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
-
-            //if (currentFood == currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction == false)
-            //then maybe have it pick at random or just default to food? 
-
-            if (Vector3.Distance(aiUnits[i].transform.position, new Vector3(0.0f, 0.0f, 0.0f)) < 2.0f) //Vector3.Distance()
-            {
-                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-            }
-            
-            if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 2.0f)
-            {
-                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-            }
-            
-            if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 2.0f)
+            if (currentGold < currentFood && aiUnits[i].GetComponent<MoveAI>().GetHasAction() == false)
             {
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(goldObject.transform.position);
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(true);
             }
-        }        
+
+            if (currentFood < currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction() == false)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(true);
+            }
+
+            if (currentFood == currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction() == false)
+            {
+                //then maybe have it pick at random or just default to food? 
+            }
+        }
+
+        SetAIMoveLocations();
     }
 
     void TrainNewUnit()
@@ -84,15 +75,23 @@ public class TeamManager : MonoBehaviour
 
     void SetAIMoveLocations()
     {
-        //for (int i = 0; i < aiUnits.Length; i++)
-        //{
-        //    aiUnits[i].GetComponent<MoveAI>().movePosition = goldObject.transform.position;
-        //}
-    }
+        for (int i = 0; i < aiUnits.Length; i++)
+        {
+            if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 2.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
+            }
 
-    public void SetLocationReached()
-    {
-        locationChangeNeeded = true;
+            if (Vector3.Distance(aiUnits[i].transform.position, foodObject.transform.position) < 2.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
+            }
+
+            if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 3.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
+            }
+        }
     }
 
     public void ChangeAIMoveSpeed()

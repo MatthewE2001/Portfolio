@@ -460,15 +460,15 @@ MonoBehaviour:
   aiUnits:
   - {fileID: 3811781781080239770}
   - {fileID: 488158849}
-  foodForUnit: 0
-  unitTrainingTime: 0
-  goldForSoldier: 0
-  soldierTrainingTime: 0
-  startingFood: 0
-  startingGold: 0
+  foodForUnit: 50
+  unitTrainingTime: 2
+  goldForSoldier: 75
+  soldierTrainingTime: 3
+  startingFood: 100
+  startingGold: 200
   goldObject: {fileID: 1566163708}
   foodObject: {fileID: 585588090}
-  moveSpeedSlider: {fileID: 2112772848}
+  moveSpeedSlider: {fileID: 914181039}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,12 +1312,12 @@ MonoBehaviour:
   aiUnits:
   - {fileID: 4569629274194741139}
   - {fileID: 1712640482}
-  foodForUnit: 0
-  unitTrainingTime: 0
-  goldForSoldier: 0
-  soldierTrainingTime: 0
-  startingFood: 0
-  startingGold: 0
+  foodForUnit: 50
+  unitTrainingTime: 2
+  goldForSoldier: 75
+  soldierTrainingTime: 3
+  startingFood: 100
+  startingGold: 200
   goldObject: {fileID: 1566163708}
   foodObject: {fileID: 585588090}
   moveSpeedSlider: {fileID: 2112772848}
