@@ -56,7 +56,9 @@ public class TeamManager : MonoBehaviour
 
             if (currentFood == currentGold && aiUnits[i].GetComponent<MoveAI>().GetHasAction() == false)
             {
-                //then maybe have it pick at random or just default to food? 
+                //just having it default to food for now but could also have it pick at random
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(true);
             }
         }
 
@@ -65,12 +67,20 @@ public class TeamManager : MonoBehaviour
 
     void TrainNewUnit()
     {
-
+        if (currentFood >= foodForUnit)
+        {
+            //train up unit
+            //Instantiate(
+        }
     }
 
     void TrainNewSoldier()
     {
-
+        if (currentGold >= goldForSoldier)
+        {
+            //train up soldier
+            //Instantiate(
+        }
     }
 
     void SetAIMoveLocations()
@@ -79,16 +89,19 @@ public class TeamManager : MonoBehaviour
         {
             if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 2.0f)
             {
+                aiUnits[i].GetComponent<Inventory>().BeginGathering();
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
             }
 
             if (Vector3.Distance(aiUnits[i].transform.position, foodObject.transform.position) < 2.0f)
             {
+                aiUnits[i].GetComponent<Inventory>().BeginGathering();
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
             }
 
             if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 3.0f)
             {
+                //maybe i could have it sit for a second to basically "unload resources"
                 aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
             }
         }

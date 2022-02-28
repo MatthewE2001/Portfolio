@@ -27,6 +27,17 @@ public class Resource : MonoBehaviour
         if (resourceRemaining == false)
         {
             currentResourceAmount = startAmountOfResource; //just to reset the resource points for simplicity
+            resourceRemaining = true;
+        }
+    }
+
+    public void ResourcesTaken(int amount)
+    {
+        currentResourceAmount -= amount;
+
+        if (currentResourceAmount <= 0)
+        {
+            resourceRemaining = false;
         }
     }
 }

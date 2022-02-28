@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee57deb09c315740baef1e2e7d1a036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAmountOfResource: 100
+  startAmountOfResource: 10000
