@@ -71,20 +71,32 @@ public class TeamManager : MonoBehaviour
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
             }
 
+            if (Vector3.Distance(aiUnits[i].transform.position, foodObject.transform.position) < 3.0f)
+            {
+                aiUnits[i].GetComponent<Inventory>().ChangeCollectionStatus(true);
+            }
+
+            if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 3.0f)
+            {
+                aiUnits[i].GetComponent<Inventory>().ChangeCollectionStatus(true);
+            }
+
             if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 3.0f)
             {
-                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
-                aiUnits[i].GetComponent<Inventory>().ChangeInventoryStatus();
-
                 if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Food)
                 {
-
+                    currentFood = currentFood + aiUnits[i].GetComponent<Inventory>().GetCurrentAmountCarried();
+                    Debug.Log(gameObject.name + " " + currentFood);
                 }
 
                 if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Gold)
                 {
-
+                    currentGold = currentGold + aiUnits[i].GetComponent<Inventory>().GetCurrentAmountCarried();
+                    Debug.Log(gameObject.name + " " + currentFood);
                 }
+
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
+                aiUnits[i].GetComponent<Inventory>().ChangeInventoryStatus();             
             }
         }
     }

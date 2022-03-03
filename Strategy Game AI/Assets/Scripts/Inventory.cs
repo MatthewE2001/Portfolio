@@ -24,6 +24,16 @@ public class Inventory : MonoBehaviour
     {
         if (collectionInProgress == true)
         {            
+            if (gameObject.GetComponent<MoveAI>().movePosition == GameObject.Find("Food").transform.position)
+            {
+                resourceType = ResourceTypes.Food;
+            }
+
+            if (gameObject.GetComponent<MoveAI>().movePosition == GameObject.Find("Gold").transform.position)
+            {
+                resourceType = ResourceTypes.Gold;
+            }
+
             //currentCollectionTime = collectionTime;
             PickUpResources();
             collectionInProgress = false;            
@@ -81,6 +91,11 @@ public class Inventory : MonoBehaviour
     public float GetCurrentCollectionTime()
     {
         return currentCollectionTime;
+    }
+
+    public int GetCurrentAmountCarried()
+    {
+        return currentAmountCarry;
     }
 
     public bool GetCollectionStatus()

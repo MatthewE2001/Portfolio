@@ -1316,8 +1316,8 @@ MonoBehaviour:
   unitTrainingTime: 2
   goldForSoldier: 75
   soldierTrainingTime: 3
-  startingFood: 100
-  startingGold: 200
+  startingFood: 200
+  startingGold: 100
   goldObject: {fileID: 1566163708}
   foodObject: {fileID: 585588090}
   moveSpeedSlider: {fileID: 2112772848}
