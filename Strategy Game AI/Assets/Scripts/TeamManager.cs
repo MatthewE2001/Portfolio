@@ -35,6 +35,11 @@ public class TeamManager : MonoBehaviour
     {
         currentFood = startingFood;
         currentGold = startingGold;
+
+        for (int i = 0; i < aiUnits.Length; i++)
+        {
+            aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
+        }
     }
 
     // Update is called once per frame
@@ -60,9 +65,28 @@ public class TeamManager : MonoBehaviour
                 aiUnits[i].GetComponent<MoveAI>().SetLocation(foodObject.transform.position);
                 aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(true);
             }
-        }
 
-        SetAIMoveLocations();
+            if (aiUnits[i].GetComponent<Inventory>().GetInventoryStatus() == true)
+            {
+                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
+            }
+
+            if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 3.0f)
+            {
+                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
+                aiUnits[i].GetComponent<Inventory>().ChangeInventoryStatus();
+
+                if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Food)
+                {
+
+                }
+
+                if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Gold)
+                {
+
+                }
+            }
+        }
     }
 
     void TrainNewUnit()
@@ -80,31 +104,13 @@ public class TeamManager : MonoBehaviour
         {
             //train up soldier
             //Instantiate(
+            //take away amount of gold
         }
     }
 
     void SetAIMoveLocations()
     {
-        for (int i = 0; i < aiUnits.Length; i++)
-        {
-            if (Vector3.Distance(aiUnits[i].transform.position, goldObject.transform.position) < 2.0f)
-            {
-                aiUnits[i].GetComponent<Inventory>().BeginGathering();
-                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-            }
-
-            if (Vector3.Distance(aiUnits[i].transform.position, foodObject.transform.position) < 2.0f)
-            {
-                aiUnits[i].GetComponent<Inventory>().BeginGathering();
-                aiUnits[i].GetComponent<MoveAI>().SetLocation(gameObject.transform.position);
-            }
-
-            if (Vector3.Distance(aiUnits[i].transform.position, gameObject.transform.position) < 3.0f)
-            {
-                //maybe i could have it sit for a second to basically "unload resources"
-                aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
-            }
-        }
+        
     }
 
     public void ChangeAIMoveSpeed()

@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
     int currentAmountCarry;
     float currentCollectionTime;
     bool inventoryFull; //this could be totally unneeded
-    bool collectionInProgress;
+    bool collectionInProgress = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,15 +23,10 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         if (collectionInProgress == true)
-        {
-            currentCollectionTime -= Time.deltaTime;
-
-            if (currentCollectionTime <= 0.0f)
-            {
-                currentCollectionTime = collectionTime;
-                PickUpResources();
-                collectionInProgress = false;
-            }
+        {            
+            //currentCollectionTime = collectionTime;
+            PickUpResources();
+            collectionInProgress = false;            
         }
     }
 
@@ -55,6 +50,13 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void EndPickup()
+    {
+        //currentCollectionTime = collectionTime;
+        PickUpResources();
+        collectionInProgress = false;
+    }
+
     public void ChangeResourceType(ResourceTypes type)
     {
         resourceType = type;
@@ -64,9 +66,30 @@ public class Inventory : MonoBehaviour
     {
         collectionInProgress = val;
     }
+    
+    public void ChangeInventoryStatus() //maybe give this parameters idk
+    {
+        currentAmountCarry = 0;
+        inventoryFull = false;
+    }
+
+    public void ResetCollectionTime()
+    {
+        currentCollectionTime = collectionTime;
+    }
 
     public float GetCurrentCollectionTime()
     {
         return currentCollectionTime;
+    }
+
+    public bool GetCollectionStatus()
+    {
+        return collectionInProgress;
+    }
+
+    public bool GetInventoryStatus()
+    {
+        return inventoryFull;
     }
 }
