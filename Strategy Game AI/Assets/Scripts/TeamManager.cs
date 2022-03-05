@@ -85,13 +85,13 @@ public class TeamManager : MonoBehaviour
             {
                 if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Food)
                 {
-                    currentFood = currentFood + aiUnits[i].GetComponent<Inventory>().GetCurrentAmountCarried();
+                    currentFood += 10;
                     Debug.Log(gameObject.name + " " + currentFood);
                 }
 
                 if (aiUnits[i].GetComponent<Inventory>().resourceType == ResourceTypes.Gold)
                 {
-                    currentGold = currentGold + aiUnits[i].GetComponent<Inventory>().GetCurrentAmountCarried();
+                    currentGold += 10;
                     Debug.Log(gameObject.name + " " + currentFood);
                 }
 
