@@ -22,6 +22,8 @@ public class TeamManager : MonoBehaviour
 
     public GameObject goldObject;
     public GameObject foodObject;
+    public GameObject unitToTrain;
+    //public GameObject soldierToTrain;
     public Slider moveSpeedSlider;
 
     int currentFood;
@@ -96,7 +98,21 @@ public class TeamManager : MonoBehaviour
                 }
 
                 aiUnits[i].GetComponent<MoveAI>().ChangeHasAction(false);
-                aiUnits[i].GetComponent<Inventory>().ChangeInventoryStatus();             
+                aiUnits[i].GetComponent<Inventory>().ChangeInventoryStatus();  
+                
+                if (currentFood > foodForUnit)
+                {
+                    Debug.Log("Training Unit");
+                    currentFood -= foodForUnit;
+                    TrainNewUnit();
+                }
+
+                if (currentGold > goldForSoldier)
+                {
+                    Debug.Log("Training Soldier");
+                    currentGold -= goldForSoldier;
+                    TrainNewSoldier();
+                }
             }
         }
     }
@@ -106,7 +122,7 @@ public class TeamManager : MonoBehaviour
         if (currentFood >= foodForUnit)
         {
             //train up unit
-            //Instantiate(
+            
         }
     }
 
@@ -131,5 +147,15 @@ public class TeamManager : MonoBehaviour
         {
             aiUnits[i].GetComponent<MoveAI>().ChangeMoveSpeed(moveSpeedSlider.value);
         }
+    }
+
+    public int GetFoodCount()
+    {
+        return currentFood;
+    }
+
+    public int GetGoldCount()
+    {
+        return currentGold;
     }
 }
