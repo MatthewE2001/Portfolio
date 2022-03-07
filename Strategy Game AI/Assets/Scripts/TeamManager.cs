@@ -122,7 +122,12 @@ public class TeamManager : MonoBehaviour
         if (currentFood >= foodForUnit)
         {
             //train up unit
-            
+            GameObject tmp;
+
+            //check if this is right
+            tmp = Instantiate(unitToTrain, gameObject.transform);
+            aiUnits[2] = tmp;
+            //aiUnits[aiUnits.Length].SetValue(tmp);
         }
     }
 

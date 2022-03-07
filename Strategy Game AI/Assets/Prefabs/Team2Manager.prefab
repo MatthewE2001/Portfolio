@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8116539091105811037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8116539091105811036}
+  - component: {fileID: 8116539091105811027}
+  - component: {fileID: 8116539091105811026}
+  m_Layer: 0
+  m_Name: Team2Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8116539091105811036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116539091105811037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.7, y: 1, z: -25.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8116539091105811027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116539091105811037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddf11afca4ba34aa09e6aef1419b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiUnits:
+  - {fileID: 0}
+  - {fileID: 0}
+  foodForUnit: 50
+  unitTrainingTime: 2
+  goldForSoldier: 75
+  soldierTrainingTime: 3
+  startingFood: 100
+  startingGold: 200
+  goldObject: {fileID: 0}
+  foodObject: {fileID: 0}
+  unitToTrain: {fileID: 3811781782703096824, guid: 51fa3771b51be974986f268a85dd0907, type: 3}
+  moveSpeedSlider: {fileID: 0}
+--- !u!114 &8116539091105811026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116539091105811037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71be6c2ed26bed4eb84bc81d9c313c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodText: {fileID: 0}
+  goldText: {fileID: 0}
+  teamManager: {fileID: 8116539091105811037}

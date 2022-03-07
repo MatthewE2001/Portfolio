@@ -109,6 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28bd637b8546f04aa8d02a4bbd58009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movePosition: {x: 0, y: 0, z: 0}
+  moveSpeed: 0.02
+  teamManager: {fileID: 8116539091105811037, guid: fd813846777f755419445aa6cc86ba90, type: 3}
 --- !u!114 &7295018585347306585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e664ee203ff7ba149aa0c6d2c8bc7ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAmountCarry: 0
+  collectionTime: 0
+  resourceType: 0
