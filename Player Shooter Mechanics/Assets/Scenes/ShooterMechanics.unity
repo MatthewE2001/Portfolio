@@ -166,6 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f610a151031b99e4b8d2d26e71c9b72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1037624073}
+  camera: {fileID: 963194225}
+  thirdPersonPosition: {fileID: 228203042010636677}
 --- !u!1 &439179586
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,12 +434,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0.58, y: 2.13, z: -8.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1037624073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 228203042601581664, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
+  m_PrefabInstance: {fileID: 228203042010636676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1878333377
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +598,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7188135773806339950, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
+--- !u!4 &228203042010636677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5675646431611614402, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
+  m_PrefabInstance: {fileID: 228203042010636676}
+  m_PrefabAsset: {fileID: 0}

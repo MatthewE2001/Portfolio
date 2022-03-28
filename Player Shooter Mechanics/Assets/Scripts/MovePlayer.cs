@@ -22,28 +22,8 @@ public class MovePlayer : MonoBehaviour
     void Move()
     {
         //i need to move x axis and z axis i assume that is all horizontal?
-        if (Input.GetKey(KeyCode.W))
-        {
-            Vector3 force = new Vector3(moveSpeed, 0.0f, 0.0f);
-            gameObject.GetComponent<Rigidbody>().AddForce(force);
-        }
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            Vector3 force = new Vector3(-moveSpeed, 0.0f, 0.0f);
-            gameObject.GetComponent<Rigidbody>().AddForce(force);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            Vector3 force = new Vector3(0.0f, 0.0f, -moveSpeed);
-            gameObject.GetComponent<Rigidbody>().AddForce(force);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            Vector3 force = new Vector3(0.0f, 0.0f, moveSpeed);
-            gameObject.GetComponent<Rigidbody>().AddForce(force);
-        }
+        gameObject.GetComponent<Rigidbody>().MovePosition(gameObject.transform.position + movement * Time.deltaTime * moveSpeed);
     }
 }
