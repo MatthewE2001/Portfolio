@@ -7,6 +7,7 @@ public class AdjustCamera : MonoBehaviour
     public GameObject player;
     public GameObject camera; //Camera camera?
     public Transform thirdPersonPosition;
+    public Transform firstPersonPosition;
 
     Vector3 distance;
     bool isThirdPerson = true;
@@ -52,11 +53,12 @@ public class AdjustCamera : MonoBehaviour
         if (isThirdPerson == true)
         {
             //want it to lerp into a first person view basically
+            camera.transform.position = thirdPersonPosition.position;
         }
         else if (isThirdPerson == false)
         {
             //lerp back to a third person camera
-            //camera.transform.position = thirdPersonPosition.position;
+            camera.transform.position = firstPersonPosition.position;
         }
     }
 }
