@@ -29,6 +29,8 @@ public class AdjustCamera : MonoBehaviour
             ChangeThirdPersonStatus();
             AdjustFirstThirdPerson();
         }
+
+        UpdateCameraPosition();
     }
 
     void UpdateCameraPosition()
