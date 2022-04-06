@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunManager : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
+    public GameObject bullet;
 
     public float bulletSpeed;
     public float range;
@@ -26,10 +27,26 @@ public class GunManager : MonoBehaviour
         {
             currentBulletCount = maxBulletCount;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            FireGun();
+        }
     }
 
     int GetDamageDealt()
     {
         return damage;
+    }
+
+    public void FireGun()
+    {
+        GameObject tmp;
+
+        currentBulletCount--;
+        tmp = Instantiate(bullet, bulletSpawnPoint);
+
+        tmp.transform.position = bulletSpawnPoint.position;
+        tmp.GetComponent<Rigidbody>().AddForce(0.0f, 0.0f, bulletSpeed);
     }
 }

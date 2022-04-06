@@ -24,7 +24,7 @@ public class AdjustCamera : MonoBehaviour
     {
         distance = distance - camera.transform.position;
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             ChangeThirdPersonStatus();
             AdjustFirstThirdPerson();
