@@ -28,7 +28,7 @@ public class GunManager : MonoBehaviour
             currentBulletCount = maxBulletCount;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && currentBulletCount > 0)
         {
             FireGun();
         }
