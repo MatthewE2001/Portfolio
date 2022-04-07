@@ -16,7 +16,7 @@ public class AdjustCamera : MonoBehaviour
     void Start()
     {
         distance = player.transform.position - camera.transform.position;
-        //camera.transform.position = 
+        camera.transform.position = thirdPersonPosition.position;
     }
 
     // Update is called once per frame

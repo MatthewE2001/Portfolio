@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1406099349050787049, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
       propertyPath: bulletSpeed
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -1406099349050787049, guid: 68f29a1547478b64ba9f0bb16eb49a7d, type: 3}
       propertyPath: maxBulletCount
