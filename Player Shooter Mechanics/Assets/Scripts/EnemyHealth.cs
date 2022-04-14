@@ -23,5 +23,10 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    //OnCollisionEnter()
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(currentHealth);
+        currentHealth -= 10;
+        Destroy(collision.collider.gameObject);
+    }
 }

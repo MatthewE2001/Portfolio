@@ -17,6 +17,18 @@ public class MovePlayer : MonoBehaviour
     void Update()
     {
         Move();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            float tmp = -5.0f;
+
+            //gameObject.transform.rotation.y = gameObject.transform.rotation.y + tmp;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            float tmp = 5.0f;
+        }
     }
 
     void Move()
