@@ -9,10 +9,12 @@ public class MoveEnemy : MonoBehaviour
     public GameObject coverLocation;
     public GameObject fireLocation;
 
+    bool readyToFire = false; //true?
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        destination = coverLocation.transform.position;
     }
 
     // Update is called once per frame
@@ -23,6 +25,9 @@ public class MoveEnemy : MonoBehaviour
 
     void ChangeLocation()
     {
+        if (readyToFire == false)
+        {
 
+        }
     }
 }
