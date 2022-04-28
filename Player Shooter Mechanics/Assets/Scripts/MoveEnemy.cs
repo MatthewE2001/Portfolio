@@ -47,6 +47,7 @@ public class MoveEnemy : MonoBehaviour
         if (Vector3.Distance(gameObject.transform.position, destination) <= 1.0f && destination == fireLocation.transform.position)
         {
             //fire gun at player
+            readyToFire = false;
         }
     }
 }
