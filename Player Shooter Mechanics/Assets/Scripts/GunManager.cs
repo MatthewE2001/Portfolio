@@ -28,10 +28,15 @@ public class GunManager : MonoBehaviour
             currentBulletCount = maxBulletCount;
         }
 
-        if (Input.GetMouseButtonDown(0) && currentBulletCount > 0)
+        if (Input.GetMouseButtonDown(0))
         {
-            FireGun();
+            if (currentBulletCount > 0)
+            {
+                FireGun();
+            }            
         }
+
+        //FireGun();
     }
 
     int GetDamageDealt()
@@ -46,6 +51,7 @@ public class GunManager : MonoBehaviour
         currentBulletCount--;
         tmp = Instantiate(bullet, bulletSpawnPoint);
 
+        //tmp.GetComponent<EnemyBullet>().SetActive(false);
         tmp.transform.position = bulletSpawnPoint.position;
         tmp.GetComponent<Rigidbody>().AddForce(0.0f, 0.0f, bulletSpeed);
     }

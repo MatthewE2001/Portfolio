@@ -8,20 +8,39 @@ public class MoveEnemy : MonoBehaviour
     public GameObject coverLocation;
     public GameObject fireLocation;
     public float moveSpeed;
+    public float moveCooldown;
 
+    float currentMoveCooldown;
+
+    bool moveReady = true;
     bool readyToFire = false; //true?
 
     // Start is called before the first frame update
     void Start()
     {
         destination = coverLocation.transform.position;
+        currentMoveCooldown = moveCooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeLocation();
-        CheckLocation();
+        if (moveReady == true)
+        {
+            ChangeLocation();
+            CheckLocation();
+        }
+
+        if (moveReady == false)
+        {
+            currentMoveCooldown -= Time.deltaTime;
+
+            if (currentMoveCooldown <= 0.0f)
+            {
+                moveReady = true;
+                currentMoveCooldown = moveCooldown;
+            }
+        }
 
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, destination, moveSpeed);
     }
@@ -44,12 +63,14 @@ public class MoveEnemy : MonoBehaviour
         if (Vector3.Distance(gameObject.transform.position, destination) <= 1.0f && destination == coverLocation.transform.position)
         {
             readyToFire = true;
+            moveReady = false;
         }
 
         if (Vector3.Distance(gameObject.transform.position, destination) <= 1.0f && destination == fireLocation.transform.position)
         {
             //fire gun at player
             readyToFire = false;
+            moveReady = false;
         }
     }
 }
