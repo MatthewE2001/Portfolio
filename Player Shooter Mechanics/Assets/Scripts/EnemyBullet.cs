@@ -18,18 +18,23 @@ public class EnemyBullet : MonoBehaviour
     void Awake()
     {
         player = GameObject.Find("Player");
+        playerLocationAtShot = player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MoveTowardsPlayer();
+
+        if (Vector3.Distance(gameObject.transform.position, playerLocationAtShot) < 1.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void MoveTowardsPlayer()
     {
-        playerLocationAtShot = player.transform.position;
-
-        //Vector3.MoveTowards
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, 
+            playerLocationAtShot, speed);
     }
 }

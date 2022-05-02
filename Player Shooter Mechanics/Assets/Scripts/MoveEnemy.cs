@@ -5,9 +5,9 @@ using UnityEngine;
 public class MoveEnemy : MonoBehaviour
 {
     public Vector3 destination;
-    public Vector3 fireDestination;
     public GameObject coverLocation;
     public GameObject fireLocation;
+    public float moveSpeed;
 
     bool readyToFire = false; //true?
 
@@ -22,6 +22,8 @@ public class MoveEnemy : MonoBehaviour
     {
         ChangeLocation();
         CheckLocation();
+
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, destination, moveSpeed);
     }
 
     void ChangeLocation()
